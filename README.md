@@ -28,3 +28,19 @@ Key aspects:
 ├── references.bib     # Bibliography file with cited works
 ├── LICENSE            # Open-source license (MIT)
 └── README.md          # This file
+Status
+
+Initial version focuses on theoretical framework and LaTeX compilation.
+Python simulations and experimental results will be included in future updates.
+
+⸻
+
+Citation
+
+If you use this project or its concepts, please cite the report and acknowledge the author.
+
+⸻
+
+License
+
+This project is licensed under the MIT License. See LICENSE for details.
