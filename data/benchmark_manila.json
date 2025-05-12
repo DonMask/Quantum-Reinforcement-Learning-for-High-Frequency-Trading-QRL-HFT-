@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "backend": "ibmq_manila",
+    "date": "2023-12-15T14:30:00.000000",
+    "shots": 1024,
+    "qubits_used": [0, 1]
+  },
+  "circuits": {
+    "hft_strategy_1": {
+      "depth": 18,
+      "gate_counts": {
+        "h": 5,
+        "cx": 8,
+        "measure": 2
+      },
+      "results": {
+        "00": 512,
+        "11": 512
+      },
+      "metrics": {
+        "MSE": 0.0213,
+        "ROI": 0.0102,
+        "execution_time": 0.015
+      }
+    },
+    "hft_strategy_2": {
+      "depth": 22,
+      "gate_counts": {
+        "h": 7,
+        "cx": 10,
+        "measure": 2
+      },
+      "results": {
+        "01": 490,
+        "10": 534
+      },
+      "metrics": {
+        "MSE": 0.0311,
+        "ROI": 0.0079,
+        "execution_time": 0.018
+      }
+    }
+  },
+  "aggregates": {
+    "mean_MSE": 0.025,
+    "mean_ROI": 0.009,
+    "mean_execution_time": 0.0165
+  }
+}
