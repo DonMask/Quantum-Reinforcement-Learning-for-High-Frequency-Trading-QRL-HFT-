@@ -30,6 +30,9 @@ Key aspects:
 └── README.md          # This file
 Status
 
+
+Status
+
 Initial version focuses on theoretical framework and LaTeX compilation.
 Python simulations and experimental results will be included in future updates.
 
@@ -37,7 +40,9 @@ Python simulations and experimental results will be included in future updates.
 
 Citation
 
-If you use this project or its concepts, please cite the report and acknowledge the author.
+If you use this project or its concepts, please cite the report and acknowledge the author:
+
+Berger, T. (2025). Quantum Reinforcement Learning for High-Frequency Trading. DOI: 10.5281/zenodo.15384978
 
 ⸻
 
