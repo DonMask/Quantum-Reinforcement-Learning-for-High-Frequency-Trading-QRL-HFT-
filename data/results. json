@@ -1,0 +1,7 @@
+{
+  "title": "Quantum Reinforcement Learning for High-Frequency Trading",
+  "creators": [{"name": "Berger, Teodor"}],
+  "description": "Benchmarking quantum Q-learning on IBMQ Manila for HFT strategies.",
+  "license": "MIT",
+  "keywords": ["quantum", "HFT", "Q-learning"]
+}
