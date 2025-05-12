@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+"""
+Automated LaTeX Report Generator
+"""
+
+import json
+import matplotlib.pyplot as plt
+from datetime import datetime
+
+def load_data():
+    """Load all JSON data files"""
+    with open('../data/benchmark_manila.json') as f:
+        benchmark = json.load(f)
+    
+    with open('../data/noise_analysis.json') as f:
+        noise = json.load(f)
+    
+    return benchmark, noise
+
+def generate_plots(noise_data):
+    """Create publication-ready plots"""
+    ps = [d['p'] for d in noise_data]
+    fids = [d['fidelity'] for d in noise_data]
+    
+    plt.figure(figsize=(8,4))
+    plt.plot(ps, fids, 'o-', label='Fidelity')
+    plt.xlabel('Noise Probability (p)')
+    plt.ylabel('State Fidelity')
+    plt.grid(True)
+    plt.savefig('../figures/fidelity_vs_noise.pdf')
+    plt.close()
+
+def generate_latex(benchmark_data, noise_data):
+    """Generate complete LaTeX report"""
+    tex_content = f"""
+\\documentclass{{article}}
+\\usepackage{{graphicx, booktabs}}
+
+\\title{{Quantum HFT Benchmark Report}}
+\\date{{{datetime.now().strftime('%Y-%m-%d')}}}
+
+\\begin{{document}}
+
+\\section{{Results}}
+
+\\subsection{{Noise Analysis}}
+\\begin{{figure}}[h]
+    \\centering
+    \\includegraphics[width=0.8\\textwidth]{{figures/fidelity_vs_noise.pdf}}
+    \\caption{{Fidelity decay under noise}}
+\\end{{figure}}
+
+\\subsection{{Benchmark Metrics}}
+\\begin{{table}}[h]
+    \\centering
+    \\caption{{Performance on {benchmark_data['metadata']['backend']}}}
+    \\begin{{tabular}}{{lcc}}
+        \\toprule
+        Strategy & MSE & ROI \\\\
+        \\midrule
+    """
+    
+    for name, circuit in benchmark_data['circuits'].items():
+        tex_content += f"        {name} & {circuit['metrics']['MSE']:.4f} & {circuit['metrics']['ROI']:.4f} \\\\\n"
+    
+    tex_content += """        \\bottomrule
+    \\end{tabular}
+\\end{table}
+
+\\end{document}
+"""
+    
+    with open('../report.tex', 'w') as f:
+        f.write(tex_content)
+
+if __name__ == "__main__":
+    print("Generating report...")
+    bench, noise = load_data()
+    generate_plots(noise)
+    generate_latex(bench, noise)
+    print("Report generated: report.tex")
+    print("Run 'pdflatex report.tex' to compile PDF")
