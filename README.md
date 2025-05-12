@@ -10,6 +10,23 @@ This work investigates the use of quantum-enhanced fidelity metrics and reinforc
 
 ## Repository Structure
 
+```
+.
+├── code/
+│   ├── benchmark_hft.py
+│   ├── generate_report.py
+│   └── quantum_fidelity.py
+├── data/
+│   ├── benchmark_manila.json
+│   └── results.json
+├── .zenodo.json
+├── LICENSE
+├── Q-TradeRL.pdf
+├── README.md
+├── main.tex
+└── references.bib
+```
+
 ## How to Run
 
 ```bash
@@ -21,11 +38,13 @@ python code/quantum_fidelity.py
 
 # 3. Generate performance report
 python code/generate_report.py
+```
 
-Citation
+## Citation
 
 If you use this work, please cite:
 
+```bibtex
 @misc{berger2025quantum,
   author       = {Teodor Berger},
   title        = {Quantum Reinforcement Learning for High-Frequency Trading},
@@ -33,12 +52,13 @@ If you use this work, please cite:
   doi          = {10.5281/zenodo.15384978},
   url          = {https://doi.org/10.5281/zenodo.15384978}
 }
+```
 
-License
+## License
 
 This project is licensed under the MIT License.
 
-Contact
+## Contact
 
-Teodor Berger
-github.com/DonMask
+**Teodor Berger**  
+[github.com/DonMask](https://github.com/DonMask)
