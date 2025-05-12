@@ -30,16 +30,13 @@ If you use this work, please cite:
   doi          = {10.5281/zenodo.15384978},
   url          = {https://doi.org/10.5281/zenodo.15384978}
 }
+
 License
 
 This project is licensed under the MIT License.
+
 Contact
 
 Teodor Berger
 github.com/DonMask
-<p align="center">
-  <img src="logo.png" alt="Quantum Trade RL Logo" width="200"/>
-</p>
-```
-
 
