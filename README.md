@@ -1,51 +1,45 @@
-# Q-TradeRL
+# Quantum Reinforcement Learning for High-Frequency Trading
 
-**Quantum Reinforcement Learning for High-Frequency Trading**
+This repository contains the full implementation and documentation for the project **Quantum Reinforcement Learning for High-Frequency Trading**, exploring the integration of quantum computing with deep RL algorithms in high-frequency market environments.
 
-Author: **Teodor Berger**, Independent Researcher  
-Date: **May 12, 2025**
+> **DOI**: [10.5281/zenodo.15384978](https://doi.org/10.5281/zenodo.15384978)
 
----
+## Overview
 
-## Project Overview
-
-This project explores the application of quantum reinforcement learning (QRL) techniques to high-frequency trading (HFT) strategies. The theoretical foundation is backed by a detailed LaTeX report covering quantum noise, fidelity decay, and the feasibility of using quantum circuits in trading environments.
-
-Key aspects:
-- Benchmarking on IBMQ backends
-- Fidelity analysis under depolarizing noise
-- Modular and reproducible structure
-- Academic and research-ready format
-
----
+This work investigates the use of quantum-enhanced fidelity metrics and reinforcement learning agents in the context of high-frequency trading (HFT). The project benchmarks performance using real market data and simulated qubit fidelity noise. Theoretical models and simulations are detailed in the LaTeX documentation.
 
 ## Repository Structure
+How to Run
+	1.	Benchmark RL agent
+ python code/benchmark_hft.py
+ 2.	Simulate quantum fidelity
+ python code/quantum_fidelity.py
+ 	3.	Generate performance report
+  python code/generate_report.py
+  License
 
-```bash
-.
-├── main.tex           # LaTeX report (main document)
-├── Q-TradeRL.pdf      # Compiled report (for easy viewing)
-├── references.bib     # Bibliography file with cited works
-├── LICENSE            # Open-source license (MIT)
-└── README.md          # This file
-Status
-
-
-Status
-
-Initial version focuses on theoretical framework and LaTeX compilation.
-Python simulations and experimental results will be included in future updates.
-
-⸻
+This project is licensed under the MIT License.
 
 Citation
 
-If you use this project or its concepts, please cite the report and acknowledge the author:
-
-Berger, T. (2025). Quantum Reinforcement Learning for High-Frequency Trading. DOI: 10.5281/zenodo.15384978
-
-⸻
-
+If you use this work, please cite:
+@misc{berger2025quantum,
+  author       = {Teodor Berger},
+  title        = {Quantum Reinforcement Learning for High-Frequency Trading},
+  year         = 2025,
+  doi          = {10.5281/zenodo.15384978},
+  url          = {https://doi.org/10.5281/zenodo.15384978}
+}
 License
 
-This project is licensed under the MIT License. See LICENSE for details.
+This project is licensed under the MIT License.
+Contact
+
+Teodor Berger
+github.com/DonMask
+<p align="center">
+  <img src="logo.png" alt="Quantum Trade RL Logo" width="200"/>
+</p>
+```
+
+
