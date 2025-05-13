@@ -60,6 +60,4 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-## Contact
-
 For questions or collaboration, contact Teodor Berger at bergerteodor@googlemail.com.
