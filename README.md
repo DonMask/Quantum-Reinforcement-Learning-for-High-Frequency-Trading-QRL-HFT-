@@ -60,5 +60,6 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-**Teodor Berger**  
-[github.com/DonMask](https://github.com/DonMask)
+## Contact
+
+For questions or collaboration, contact Teodor Berger at bergerteodor@googlemail.com.
